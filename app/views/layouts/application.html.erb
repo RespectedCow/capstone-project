@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ehassle</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <%= link_to  "Ehassle", root_path , class: "nav-header navbar-brand" %>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <%= link_to  "Home", root_path, class: "nav-link" %>
+            </li>
+              
+        </div>
+        <%= link_to  "Sign  up", root_path , class: "btn btn-primary my-sm-2" %>
+        <%= link_to  "Login", root_path , class: "margin-left btn btn-outline-success my-2 my-sm-0" %>
+    </nav>
+    <%= yield %>
+    <footer>
+    </footer>
+  </body>
+</html>
