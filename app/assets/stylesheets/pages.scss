@@ -11,39 +11,35 @@
     align-items: center;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  
-.column {
-    display: flex;
-    width: 20%;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
+#motto {
+    margin-bottom: 200px;
+    margin-right: 300px;
 }
 
-#motto {
-    margin-left: 300px;
-    margin-bottom: 500px;
+.info-card {
+    width: 395px;
+    height: 145px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: .25rem;
+}
+
+.info-text {
+    margin-left: 5px;
+}
+
+.icon {
+    height: 100px;
+    width: 120px;
 }
 
 #imagedisplay {
-    height: 600px;
-    width: 600px;
-}
-
-h1 {
-    color: #3d3d3d;
-    font-family: 'Rubik', sans-serif;
-}
-
-h3 {
-    color: #3d3d3d;
-    font-family: 'Rubik', sans-serif;
+    height: 700px;
+    width: 800px;
 }
 
 .custom-shape-divider-bottom-1630496031 {
@@ -55,6 +51,10 @@ h3 {
     line-height: 0;
 }
 
+.bg-alice-blue {
+    background-color: lightskyblue;
+}
+
 .custom-shape-divider-bottom-1630496031 svg {
     position: relative;
     display: block;
@@ -63,5 +63,5 @@ h3 {
 }
 
 .custom-shape-divider-bottom-1630496031 .shape-fill {
-    fill: #FFFFFF;
+    fill: lightskyblue;
 }

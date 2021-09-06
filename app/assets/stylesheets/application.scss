@@ -15,21 +15,19 @@
  */
 
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 .navbar {
     .nav-header {
         text-decoration: none;
         font-size: 35px;
         color: black;
-        font-family: 'Rubik', sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
     .nav-link {
         text-decoration: none;
         color: black;
         font-size: 30px;
-        font-family: 'Rubik', sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
     .block {
         width: 60%;
@@ -38,12 +36,32 @@
     
 }
 
+.item-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.downleft {
+    margin-left: 800px;
+    font-size: 10px;
+}
+
 .margin-left {
     margin-left: 10px;
 }
 
+.bg-ivory {
+    background-color: #F2F1E8 !important;
+}
+
 h1 {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
 }
 
 main {
@@ -52,4 +70,48 @@ main {
 
 body {
     overflow-y: scroll;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.shadow {
+    box-shadow: 15px 15px 8px black;
+}
+
+.seperator {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 2px;
+    height: 70%;
+    background-color: lightgrey;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.smallprint {
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    flex: 1;
+}
+
+.text-warp {
+    word-wrap: break-word;
+}
+
+.text-center {
+    text-align: center;
 }
