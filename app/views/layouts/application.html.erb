@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ehassle</title>
+    <title>No name yet</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,29 +12,40 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light text-center">
         <%= link_to  "Ehassle", root_path , class: "nav-header navbar-brand" %>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <%= link_to  "Home", root_path, class: "nav-link" %>
             </li>
-              
         </div>
 
         <% if user_signed_in? %>
-          <p class="margin-left" style="font-size: 17px;"><%= current_user.email %></p>
-          <%= link_to  "Logout", destroy_user_session_path , class: "margin-left btn btn-outline-success my-2 my-sm-0", method: :delete %>
+          <div class="nav-item nav-item-dropdown" style="margin-right: 10px">
+            <div class="dropdown-trigger hover-cursor"><%= current_user.username %></div>
+            <ul class="dropdown-menuu" style="width: 70px;">
+              <li class="dropdown-menu-item">
+                <%= link_to  "Logout", destroy_user_session_path, method: :delete %>
+              </li>
+            </ul>
+          </div>
+          <a href="">
+            <img src="https://cdn.discordapp.com/attachments/815472652293898260/885451456864469062/bellimage.png" alt="Bell" width="30px" height="30px" style="margin-right: 20px;">
+          </a>
         <% else %>
           <%= link_to  "Sign  up", new_user_registration_path , class: "btn btn-primary my-sm-2" %>
           <%= link_to  "Login", user_session_path , class: "margin-left btn btn-outline-success my-2 my-sm-0" %>
         <% end %>
     </nav>
-    <main>
-      <%= yield %>
-    </main>
+    <%= yield %>
     <footer>
-
+      <section class="column" style="margin-left: 300px;">
+        <h3 class="bold">CONTACTS</h3>
+        <a href="">Email</a>
+        <a href="">Phone Number</a>
+      </section>
+      <p class="smallprint" style="margin-left: 45%; margin-top: -1;">@Copyright reserved 2021 Jimmy Chu Pau Tong</p>
     </footer>
   </body>
 </html>

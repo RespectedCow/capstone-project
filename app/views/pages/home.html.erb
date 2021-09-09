@@ -1,0 +1,30 @@
+<section class="main-content bg-ivory">
+    <section class="item-row">
+        <h1 id="tabindictor" style="width: 400px;">Buyer tab</h1>
+        <div class="selector darkshadow" style="margin-left: 1200px;">
+            <div id="buyerbutton" class="div-clicked">Buyer</div>
+            <div id="perfomerbutton">Performer</div>
+        </div>    
+    </section>
+    <section id="performerframe" style="display: none;">
+        <%= link_to  " + Create a gig", new_gig_path, class: "btn btn-outline-success my-2 my-sm-0" %>
+        <h3 class="bold">Your gigs</h3>
+        <% hasGig = false %>
+        <% current_user.gigs.each do |gig| %>
+            <% hasGig = true %>
+            <div class="gigcard item-row">
+                <h5 style="height: 10px;"><%= gig.title %></h5>
+                <div style="width: 70%;"></div>
+                <%= link_to  "Show", gig, class: "btn btn-outline-success my-2 my-sm-0" %>
+                <%= link_to  "Edit", edit_gig_path(gig), class: "btn btn-outline-primary my-2 my-sm-0", style: "margin-left: 10px;" %>
+                <%= link_to  "Delete", gig, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger my-2 my-sm-0", style: "margin-left: 10px;" %>
+            </div>
+        <% end %>
+        <% if hasGig == false %>
+            <p>You don't have a gig. Create one now!</p>
+        <% end %>
+    </section>
+    <section id="buyerframe" style="display: block;">
+        
+    </section>
+</section>

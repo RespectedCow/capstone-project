@@ -17,6 +17,19 @@
     <div style="height: 100px;"></div>
     <section class="item-row">
         <div class="info-card shadow text-wrap" style="margin-left: 50px;">
+            <%= show_svg('Compare.svg') %>
+            <div class="seperator"></div>
+            <h5 class="info-text">Compare performer prices and ratings.</h5>
+        </div>   
+        <div class="info-card shadow text-warp" style="margin-left: 200px;">
+            <%= show_svg('Arrange.svg') %>
+            <div class="seperator"></div>
+            <h5 class="info-text">Arrange online or offline performances with this platform.</h5>
+        </div> 
+    </section>
+    <div style="height: 95px;"></div>
+    <section class="item-row">
+        <div class="info-card shadow text-wrap" style="margin-left: 50px;">
             <%= show_svg('Free.svg') %>
             <div class="seperator"></div>
             <h5 class="info-text">Make a gig and start selling. For Free!</h5>
@@ -28,27 +41,17 @@
         </div> 
     </section>
     <p class="downleft">Disclaimer: this hasn't been implemented yet.</p>
-    <div style="height: 95px;"></div>
-    <section class="item-row">
-        <div class="info-card shadow text-wrap" style="margin-left: 50px;">
-            <%= show_svg('Compare.svg') %>
-            <div class="seperator"></div>
-            <h5 class="info-text">Compare performer prices and ratings.</h5>
-        </div>   
-        <div class="info-card shadow text-warp" style="margin-left: 200px;">
-            <%= show_svg('Arrange.svg') %>
-            <div class="seperator"></div>
-            <h5 class="info-text">Arrange online or offline performances with this platform.</h5>
-        </div> 
-    </section>
 </section>
-<section class="bg-ivory" style="height: 600px; padding-top: 100px; align-items: center;">
+<section class="bg-ivory" style="height: 620px; padding-top: 100px; align-items: center;">
     <section class="col-md-8 offset-md-2 text-center">
         <h3 class="bold" style="font-size: 50px;">Sign up now</h3>
         <div style="height: 100px;"></div>
         <%= link_to  "Sign up", new_user_registration_path, class: "btn btn-danger", style: "position: relative; width: 100px; height: 40px;" %>
+        <% if user_signed_in? %>
+            <p>The button will not work properly if you are signed in. You will be redirected back to the homepage</p>
+        <% end %>
         <div style="height: 70px;"></div>
-        <p class="smallprint">Contact the team at </p>
+        <p class="smallprint">Check us out at </p>
     </section>
     <section class="item-row">
         <a href="#">
