@@ -22,12 +22,11 @@
         </div>
 
         <% if user_signed_in? %>
-          <div class="nav-item nav-item-dropdown" style="margin-right: 10px">
-            <div class="dropdown-trigger hover-cursor"><%= current_user.username %></div>
-            <ul class="dropdown-menuu" style="width: 70px;">
-              <li class="dropdown-menu-item">
-                <%= link_to  "Logout", destroy_user_session_path, method: :delete %>
-              </li>
+          <div class="dropdown hover">
+            <a href=""><%= current_user.username %></a>
+            <ul>
+              <li><%= link_to  "PROFILE", root_path %></li>
+              <li><%= link_to  "LOGOUT", destroy_user_session_path %></li>
             </ul>
           </div>
           <a href="">
