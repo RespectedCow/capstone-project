@@ -1,7 +1,14 @@
 <section class="bg-ivory center" style="height: 800px;">
     <div class="column" style="width: 70%; flex: 0;">
-        <h1 style="width: 700px;"><%= @gig.title %></h1>
-        <h3 class="bottomborder" style="margin-top: 100px;">Description</h3>
+        <h1 style="width: 700px;"><%= @gig.title %>
+        <% if current_user == @gig.user %>
+            <%= link_to edit_gig_path(@gig) do %>
+                <%= image_tag("penciledit.png", alt: 'Pencil edit', style: "height: 30px; width: 30px;")%>
+            <% end %>
+        <% end %>
+        </h1>
+        <p><%= @gig.user.username %>'s gig</p>
+        <h3 class="bottomborder" style="margin-top: 70px;">Description</h3>
         <div class="trix-content">
             <%= @gig.description %>
         </div>
