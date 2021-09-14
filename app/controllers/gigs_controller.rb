@@ -37,6 +37,8 @@ class GigsController < ApplicationController
 
     def destroy
         @gig.destroy
+
+        redirect_to root_path
     end
     
     def show 
@@ -48,6 +50,6 @@ class GigsController < ApplicationController
     end
 
     def gig_params
-      params.require(:gig).permit(:title, :description, :username)
+      params.require(:gig).permit(:title, :description, :price, :username, :offoron, :gigtype)
     end
 end

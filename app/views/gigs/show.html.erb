@@ -7,10 +7,11 @@
             <% end %>
         <% end %>
         </h1>
-        <p><%= @gig.user.username %>'s gig</p>
+        <p><%= @gig.user.username %>'s gig. <% if current_user.gender == "Male" %> He <% else %> She <% end %></p>
         <h3 class="bottomborder" style="margin-top: 70px;">Description</h3>
         <div class="trix-content">
             <%= @gig.description %>
         </div>
+
     </div>
 </section>

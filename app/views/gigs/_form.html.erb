@@ -13,15 +13,26 @@
 
   <div class="field">
     <h3><%= form.label :title %></h3>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, required: true, placeholder: "I will be..." %>
   </div>
 
   <div class="field">
     <h3><%= form.label :description %></h3>
-    <%= form.rich_text_area :description %>
+    <%= form.rich_text_area :description, required: true, placeholder: "I live in..." %>
   </div>
 
-  <div class="actions">
+  <div class="field">
+    <h3><%= form.label :price %></h3>
+    <section class="item-row" style="justify-content: left;">
+      <%= form.number_field :price, placeholder: "10", required: true %>
+      $
+    </section>
+  </div>
+
+  <%= form.select :offoron, Gig::OPTIONS%>
+  <%= form.select :gigtype, Gig::TYPES%>
+
+  <div class="actions" style="margin-top: 100px;">
     <%= form.submit %>
   </div>
 <% end %>
