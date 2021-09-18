@@ -29,8 +29,23 @@
     </section>
   </div>
 
-  <%= form.select :offoron, Gig::OPTIONS%>
-  <%= form.select :gigtype, Gig::TYPES%>
+  <h4 class="bold">Tags</h4>
+  <div class="field">
+    <%= form.select :offoron, options_for_select(Gig::OPTIONS), class: "gig_card", required: true %>
+    <%= form.select :gigtype, options_for_select(Gig::TYPES), class: "gig_card", required: true %>
+  </div>
+
+  <h4>What is the maximum time that a performance can last?</h4>
+  <div class="field">
+    <%= form.number_field :maxtime  %>
+    <%= form.select :timetype, options_for_select([["Minutes"], ["Hours"]]), required: true %>
+  </div>
+
+  <h4>What country and state can you perform in?</h4>
+  <div class="field">
+    <%= form.label :country %><%= form.text_field :country, required: true %>
+    <%= form.label :state %><%= form.text_field :state, required: true %>
+  </div>
 
   <div class="actions" style="margin-top: 100px;">
     <%= form.submit %>

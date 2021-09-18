@@ -25,6 +25,9 @@
         <% end %>
     </section>
     <section id="buyerframe" style="display: block;">
-        
+        <%= search_form_for @q, remote: true do |f| %>
+            <%= f.search_field :title %>
+            <%= f.submit %>
+        <% end %>
     </section>
 </section>

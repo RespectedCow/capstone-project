@@ -7,6 +7,11 @@ class GigsController < ApplicationController
     def edit
     end
 
+    def index 
+        @q = Gig.ransack(params[:q])
+        @gigs = @q.result
+    end
+
     def create 
         @gig = Gig.new(gig_params)
         @gig.user = current_user
@@ -50,6 +55,6 @@ class GigsController < ApplicationController
     end
 
     def gig_params
-      params.require(:gig).permit(:title, :description, :price, :username, :offoron, :gigtype)
+      params.require(:gig).permit(:title, :description, :price, :username, :offoron, :gigtype, :maxtime, :timetype, :country, :state)
     end
 end

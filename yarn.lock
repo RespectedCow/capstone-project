@@ -2513,6 +2513,11 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
+dayjs@^1.10.6:
+  version "1.10.7"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.7.tgz#2cf5f91add28116748440866a0a1d26f3a6ce468"
+  integrity sha512-P6twpd70BcPK34K26uJ1KT3wlhpuOAPoMwJzpsIWUxHZ7wpmbdZL/hQqBDfz7hGurYSa5PhzdhDHtt319hL3ig==
+
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
@@ -6778,6 +6783,13 @@ signal-exit@^3.0.0, signal-exit@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
+
+simple-datatables@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/simple-datatables/-/simple-datatables-3.1.2.tgz#13b6763a068fb338e1827a07f5141d3b4d89cedc"
+  integrity sha512-WRUKautqfJTZYwZRyx2YCd7MhUyx3SKnKcpdRZGbj1kljz4L8YTI51jnZNwLRYopb4jhCozxN/3F7/4KS273WA==
+  dependencies:
+    dayjs "^1.10.6"
 
 simple-swizzle@^0.2.2:
   version "0.2.2"

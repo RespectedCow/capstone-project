@@ -2,6 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.select {
-    
+.gig_card {
+    padding: 5px;
+    background-color: #7a7d85;
+    width: 150px;
+}
+
+#price_card {
+    border-top: solid 3px green;
+    background-color: white;
+    border-radius: .25rem;
+    padding: 10px;
 }

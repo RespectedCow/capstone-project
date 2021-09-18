@@ -1,5 +1,6 @@
 <section class="bg-ivory center" style="height: 800px;">
     <div class="column" style="width: 70%; flex: 0;">
+        <div class="bold">Category: <a href="" class="bold"><%= @gig.gigtype %></a></div>
         <h1 style="width: 700px;"><%= @gig.title %>
         <% if current_user == @gig.user %>
             <%= link_to edit_gig_path(@gig) do %>
@@ -7,11 +8,20 @@
             <% end %>
         <% end %>
         </h1>
-        <p><%= @gig.user.username %>'s gig. <% if current_user.gender == "Male" %> He <% else %> She <% end %></p>
-        <h3 class="bottomborder" style="margin-top: 70px;">Description</h3>
+        <p><%= @gig.user.username %>'s gig.</p>
+        <h3 class="bold" style="margin-top: 20px;">Description</h3>
         <div class="trix-content">
             <%= @gig.description %>
         </div>
-
+        <div id="price_card" style="margin-top: 20px;">
+            <h3 class="bold"><%= @gig.price %>$</h3>
+            <h5 class="bold">Details</h5>
+            <ul>
+                <li>The performance can be held <%= @gig.offoron.downcase %>.</li>
+                <li>The longest time a performance can last is <%= @gig.maxtime %> <%= @gig.timetype.downcase %>.</li>
+            </ul>
+            <div style="background-color: green; width: 90%; margin-left: auto; margin-right: auto; height: 2px; border-radius: 5px;" class="seperator"></div>
+            <%= link_to  "Buy now", root_path, class: "btn btn-danger", style: "margin-left: 45%; margin-top: 10px" %>
+        </div>
     </div>
-</section>
+</section>  

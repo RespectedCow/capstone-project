@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_14_133650) do
+ActiveRecord::Schema.define(version: 2021_09_18_014625) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,10 @@ ActiveRecord::Schema.define(version: 2021_09_14_133650) do
     t.integer "price"
     t.string "offoron"
     t.text "gigtype"
+    t.integer "maxtime"
+    t.text "timetype"
+    t.text "country"
+    t.text "state"
   end
 
   create_table "users", force: :cascade do |t|
