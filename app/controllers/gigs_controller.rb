@@ -7,11 +7,6 @@ class GigsController < ApplicationController
     def edit
     end
 
-    def index 
-        @q = Gig.ransack(params[:q])
-        @gigs = @q.result
-    end
-
     def create 
         @gig = Gig.new(gig_params)
         @gig.user = current_user

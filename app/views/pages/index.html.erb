@@ -26,8 +26,12 @@
     </section>
     <section id="buyerframe" style="display: block;">
         <%= search_form_for @q, remote: true do |f| %>
-            <%= f.search_field :title %>
+            <%= f.label :title_cont, 'Gig title' %>
+            <%= f.search_field :title_cont %>
             <%= f.submit %>
+        <% end %>
+        <% @gigs.each do |gig| %>
+            <%= gig.title %><br>
         <% end %>
     </section>
 </section>
