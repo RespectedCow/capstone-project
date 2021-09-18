@@ -6,7 +6,7 @@ class GigsController < ApplicationController
 
     def edit
     end
-
+    
     def create 
         @gig = Gig.new(gig_params)
         @gig.user = current_user

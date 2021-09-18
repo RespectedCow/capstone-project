@@ -25,13 +25,20 @@
         <% end %>
     </section>
     <section id="buyerframe" style="display: block;">
-        <%= search_form_for @q, remote: true do |f| %>
-            <%= f.label :title_cont, 'Gig title' %>
-            <%= f.search_field :title_cont %>
+        <%= search_form_for(@q, url: root_url, method: :get) do |f| %>
+            <%= f.search_field :country_cont, placeholder: "Country" %>
+            <%= f.search_field :state_cont, placeholder: "State" %>
+            <%= f.search_field :title_cont, placeholder: "Title" %>
             <%= f.submit %>
         <% end %>
-        <% @gigs.each do |gig| %>
-            <%= gig.title %><br>
+        <div style="height: 10px;"></div>
+        <% current_user.gigs.each do |gig| %>
+            <% hasGig = true %>
+            <div class="gigcard item-row">
+                <h5 style="height: 10px; width: 500px;"><%= gig.title %></h5>
+                <div style="width: 70%;"></div>
+                <%= link_to  "Show", gig, class: "btn btn-outline-success my-2 my-sm-0", style: "margin-right: 10px;" %>
+            </div>
         <% end %>
     </section>
 </section>
